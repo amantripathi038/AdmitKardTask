@@ -26,13 +26,13 @@ async function processFile(filepath) {
             const word = words[i];
             // Increment word frequency
             wordFrequency.set(word, (wordFrequency.get(word) || 0) + 1);
+        }
 
-            // Increment co-occurrence frequencies
-            for (let j = i + 1; j < words.length; j++) {
-                const adjacentWord = words[j];
-                const wordPair = `${word} ${adjacentWord}`;
-                coOccurrenceMap.set(wordPair, (coOccurrenceMap.get(wordPair) || 0) + 1);
-            }
+        // Increment co-occurrence frequencies
+        for (let i = 1; i < words.length; i++) {
+            const adjacentWord = words[i];
+            const wordPair = `${words[i - 1]} ${adjacentWord}`;
+            coOccurrenceMap.set(wordPair, (coOccurrenceMap.get(wordPair) || 0) + 1);
         }
     }
 
@@ -69,13 +69,13 @@ function analyzeText(text) {
             const word = words[i];
             // Increment word frequency
             wordFrequency.set(word, (wordFrequency.get(word) || 0) + 1);
+        }
 
-            // Increment co-occurrence frequencies
-            for (let j = i + 1; j < words.length; j++) {
-                const adjacentWord = words[j];
-                const wordPair = `${word} ${adjacentWord}`;
-                coOccurrenceMap.set(wordPair, (coOccurrenceMap.get(wordPair) || 0) + 1);
-            }
+        // Increment co-occurrence frequencies
+        for (let i = 1; i < words.length; i++) {
+            const adjacentWord = words[i];
+            const wordPair = `${words[i - 1]} ${adjacentWord}`;
+            coOccurrenceMap.set(wordPair, (coOccurrenceMap.get(wordPair) || 0) + 1);
         }
     }
 
