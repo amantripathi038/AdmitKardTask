@@ -9,7 +9,10 @@
 * Responsive Design.
 * Realtime Search on client size.
 
+## Live at: https://chimerical-pony-a350c8.netlify.app
+## Backend Live at: https://gusty-wide-mat.glitch.me
 
+## Note: It takes a few seconds extra to handle 1st request as glitch.com takes a little while to restart the server.
 
 Frontend repository: https://github.com/amantripathi038/AdmitKard-Frontend
 ## Installation
